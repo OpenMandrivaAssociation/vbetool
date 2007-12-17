@@ -12,7 +12,6 @@ URL:            http://www.srcf.ucam.org/~mjg59/vbetool/
 Source:         http://www.srcf.ucam.org/~mjg59/vbetool/vbetool_%{version}-1.tar.bz2
 BuildRequires:  pciutils-devel
 ExclusiveArch:  %{ix86} x86_64
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 
 %description 
