@@ -6,6 +6,7 @@ License:        GPL
 Group:          System/Configuration/Other
 URL:            http://www.srcf.ucam.org/~mjg59/vbetool/
 Source:         http://www.srcf.ucam.org/~mjg59/vbetool/vbetool_%{version}.tar.gz
+Patch0:		vbetool_1.1-lz.patch
 BuildRequires:  pciutils-devel libx86-devel
 ExclusiveArch:  %{ix86} x86_64
 BuildRoot:      %{_tmppath}/%{name}-%{version}
@@ -18,6 +19,7 @@ and attempts to initialize the video card from scratch.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x
