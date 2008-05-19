@@ -1,12 +1,12 @@
 Summary:        Real-mode video BIOS utility to alter hardware state
 Name:		vbetool
-Version:	0.7
-Release:	%mkrel 2
+Version:	1.1
+Release:	%mkrel 1
 License:        GPL
 Group:          System/Configuration/Other
 URL:            http://www.srcf.ucam.org/~mjg59/vbetool/
-Source:         http://www.srcf.ucam.org/~mjg59/vbetool/vbetool_%{version}-1.tar.bz2
-BuildRequires:  pciutils-devel
+Source:         http://www.srcf.ucam.org/~mjg59/vbetool/vbetool_%{version}.tar.gz
+BuildRequires:  pciutils-devel libx86-devel
 ExclusiveArch:  %{ix86} x86_64
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
@@ -20,11 +20,7 @@ and attempts to initialize the video card from scratch.
 %setup -q
 
 %build
-%configure \
-%ifarch x86_64
---with-x86emu 
-%endif
-
+%configure2_5x
 %make
 
 %install
