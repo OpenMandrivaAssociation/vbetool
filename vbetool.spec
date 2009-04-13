@@ -22,6 +22,7 @@ and attempts to initialize the video card from scratch.
 %patch0 -p1
 
 %build
+autoreconf -fi
 %configure2_5x
 %make
 
