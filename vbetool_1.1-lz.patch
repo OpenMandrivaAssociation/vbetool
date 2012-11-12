@@ -1,0 +1,8 @@
+--- vbetool-1.1/Makefile.am~	2008-05-16 14:52:33.000000000 +0200
++++ vbetool-1.1/Makefile.am	2008-05-19 23:59:39.000000000 +0200
+@@ -14,4 +14,4 @@
+ 	$(RM) Makefile.in aclocal.m4 config.h.in stamp-h.in configure
+ 
+ AM_CFLAGS = -g -Wall -pedantic -std=gnu99
+-AM_LDFLAGS = -lz -lx86
++AM_LDFLAGS = -lx86
