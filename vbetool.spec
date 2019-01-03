@@ -1,11 +1,11 @@
 Summary:        Real-mode video BIOS utility to alter hardware state
 Name:		vbetool
-Version:	1.1
-Release:	23
+Version:	1.2.2
+Release:	1
 License:        GPL
 Group:          System/Configuration/Other
 URL:            http://www.srcf.ucam.org/~mjg59/vbetool/
-Source:         http://www.srcf.ucam.org/~mjg59/vbetool/vbetool_%{version}.tar.gz
+Source:         hhttp://www.codon.org.uk/~mjg59/vbetool/download/vbetool-%{version}.tar.bz2
 Patch0:		vbetool_1.1-lz.patch
 Patch1:		vbetool-1.2.2-automake-1.13.patch
 BuildRequires:  pkgconfig(libpci) 
