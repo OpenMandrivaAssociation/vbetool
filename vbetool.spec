@@ -23,7 +23,8 @@ Currently, it is able to alter DPMS states, save/restore video card state
 and attempts to initialize the video card from scratch.
 
 %prep
-%autosetup -p1
+%setup -q
+%autopatch -p1
 
 %build
 autoreconf -fi
