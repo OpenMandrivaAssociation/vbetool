@@ -13,7 +13,7 @@ BuildRequires:  pkgconfig(pciaccess)
 BuildRequires:  pkgconfig(x86) 
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(udev)
-BuildRequires:  systemd-macros
+BuildRequires:  systemd-rpm-macros
 ExclusiveArch:  %{ix86} %{x86_64} %{arm}
 
 %description 
