@@ -4,7 +4,7 @@ Version:	1.2.2
 Release:	2
 License:        GPL
 Group:          System/Configuration/Other
-URL:            http://www.srcf.ucam.org/~mjg59/vbetool/
+URL:            https://www.srcf.ucam.org/~mjg59/vbetool/
 Source:         hhttp://www.codon.org.uk/~mjg59/vbetool/download/vbetool-%{version}.tar.bz2
 Patch0:		vbetool_1.1-lz.patch
 Patch1:		vbetool-1.2.2-automake-1.13.patch
