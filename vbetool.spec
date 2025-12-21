@@ -8,6 +8,11 @@ URL:            https://www.srcf.ucam.org/~mjg59/vbetool/
 Source:         hhttp://www.codon.org.uk/~mjg59/vbetool/download/vbetool-%{version}.tar.bz2
 Patch0:		vbetool_1.1-lz.patch
 Patch1:		vbetool-1.2.2-automake-1.13.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(libpci) 
 BuildRequires:  pkgconfig(pciaccess) 
 BuildRequires:  pkgconfig(x86) 
