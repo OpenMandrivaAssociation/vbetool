@@ -32,8 +32,8 @@ and attempts to initialize the video card from scratch.
 %autopatch -p1
 
 %build
-autoreconf -fi
-%configure --prefix=/usr --sbindir=/usr/bin
+./autogen.sh --prefix=/usr --sbindir=/usr/bin
+%configure
 %make_build
 
 %install
