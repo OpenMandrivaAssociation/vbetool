@@ -33,7 +33,7 @@ and attempts to initialize the video card from scratch.
 
 %build
 autoreconf -fi
-%configure
+%configure --prefix=/usr --sbindir=/usr/bin
 %make_build
 
 %install
@@ -43,6 +43,6 @@ install -m 0644 -D udev-video-post-example.rules $RPM_BUILD_ROOT/%{_udevrulesdir
 %files 
 %doc COPYING 
 %doc %{_mandir}/man1/vbetool.1*
-%{_sbindir}/vbetool
+%{_bindir}/vbetool
 %{_udevrulesdir}/92-video-post.rules
   
