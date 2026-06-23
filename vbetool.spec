@@ -12,7 +12,7 @@ Patch1:		vbetool-1.2.2-automake-1.13.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool-base
-BuildRequires:	slibtool
+BuildRequires:	libtool
 BuildRequires:	make
 BuildRequires:  pkgconfig(libpci) 
 BuildRequires:  pkgconfig(pciaccess) 
@@ -33,7 +33,15 @@ and attempts to initialize the video card from scratch.
 %autopatch -p1
 
 %build
+ln -sf %{_bindir}/libtoolize slibtoolize
+export PATH=$PWD:$PATH
+export LIBTOOLIZE=%{_bindir}/libtoolize
+export LIBTOOL=%{_bindir}/libtool
 autoreconf -fi
+ln -sf %{_bindir}/libtoolize slibtoolize
+export PATH=$PWD:$PATH
+export LIBTOOLIZE=%{_bindir}/libtoolize
+export LIBTOOL=%{_bindir}/libtool
 %configure --sbindir=%{_bindir}
 %make_build
 
