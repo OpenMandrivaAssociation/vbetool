@@ -43,6 +43,6 @@ install -m 0644 -D udev-video-post-example.rules $RPM_BUILD_ROOT/%{_udevrulesdir
 %files 
 %doc COPYING 
 %doc %{_mandir}/man1/vbetool.1*
-%{_bindir}/vbetool
+#{_bindir}/vbetool
 %{_udevrulesdir}/92-video-post.rules
   
