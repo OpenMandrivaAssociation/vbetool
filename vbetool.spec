@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 Summary:        Real-mode video BIOS utility to alter hardware state
 Name:		vbetool
 Version:	1.2.2
