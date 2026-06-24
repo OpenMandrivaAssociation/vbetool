@@ -20,7 +20,6 @@ BuildRequires:  pkgconfig(x86)
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(udev)
 BuildRequires:  systemd-rpm-macros
-ExclusiveArch:  %{ix86} %{x86_64} %{arm}
 
 %description 
 vbetool allows you to run real-mode video BIOS code to alter 
@@ -29,8 +28,7 @@ Currently, it is able to alter DPMS states, save/restore video card state
 and attempts to initialize the video card from scratch.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 ln -sf %{_bindir}/libtoolize slibtoolize
@@ -52,6 +50,6 @@ install -m 0644 -D udev-video-post-example.rules $RPM_BUILD_ROOT/%{_udevrulesdir
 %files 
 %doc COPYING 
 %doc %{_mandir}/man1/vbetool.1*
-#{_bindir}/vbetool
+%{_bindir}/vbetool
 %{_udevrulesdir}/92-video-post.rules
   
