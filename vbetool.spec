@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 Summary:        Real-mode video BIOS utility to alter hardware state
 Name:		vbetool
 Version:	1.2.2
@@ -11,7 +12,7 @@ Patch1:		vbetool-1.2.2-automake-1.13.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool-base
-BuildRequires:	slibtool
+BuildRequires:	libtool
 BuildRequires:	make
 BuildRequires:  pkgconfig(libpci) 
 BuildRequires:  pkgconfig(pciaccess) 
@@ -32,8 +33,16 @@ and attempts to initialize the video card from scratch.
 %autopatch -p1
 
 %build
+ln -sf %{_bindir}/libtoolize slibtoolize
+export PATH=$PWD:$PATH
+export LIBTOOLIZE=%{_bindir}/libtoolize
+export LIBTOOL=%{_bindir}/libtool
 autoreconf -fi
-%configure
+ln -sf %{_bindir}/libtoolize slibtoolize
+export PATH=$PWD:$PATH
+export LIBTOOLIZE=%{_bindir}/libtoolize
+export LIBTOOL=%{_bindir}/libtool
+%configure --sbindir=%{_bindir}
 %make_build
 
 %install
@@ -43,6 +52,6 @@ install -m 0644 -D udev-video-post-example.rules $RPM_BUILD_ROOT/%{_udevrulesdir
 %files 
 %doc COPYING 
 %doc %{_mandir}/man1/vbetool.1*
-%{_sbindir}/vbetool
+#{_bindir}/vbetool
 %{_udevrulesdir}/92-video-post.rules
   
